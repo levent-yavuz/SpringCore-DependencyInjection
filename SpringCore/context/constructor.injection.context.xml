@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="teamId" class="com.levent.constructor.injection.model.Team" >  
+		<constructor-arg name="name" value="Machester City"></constructor-arg>
+		<constructor-arg name="nickName" value="The Sky Blues"></constructor-arg>
+		<constructor-arg name="shirtColor" value="Blue and White"></constructor-arg>
+		<constructor-arg name="championshipsWon" value="6"></constructor-arg>
+		<constructor-arg name="name" value="Machester City"></constructor-arg>
+		<constructor-arg name="players">
+			<list>
+				<bean id="player1" class="com.levent.constructor.injection.model.Player">
+					<property name="name" value="Phil"></property>
+					<property name="surname" value="Foden"></property>
+					<property name="age" value="20"></property>
+				</bean>
+				<bean id="player2" class="com.levent.constructor.injection.model.Player">
+						<property name="name" value="Bernardo"></property>
+						<property name="surname" value="Silva"></property>
+						<property name="age" value="28"></property>
+				</bean>
+				<bean id="player3" class="com.levent.constructor.injection.model.Player">
+					<property name="name" value="Ilkay"></property>
+					<property name="surname" value="Gundogan"></property>
+					<property name="age" value="31"></property>
+				</bean>
+			</list>
+		</constructor-arg>
+	</bean >
+</beans>

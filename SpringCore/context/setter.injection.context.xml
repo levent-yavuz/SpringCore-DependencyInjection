@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="teamId" class="com.levent.setter.injection.model.Team" >  
+		<property name="name" value="Machester City"></property>
+		<property name="nickName" value="The Sky Blues"></property>
+		<property name="shirtColor" value="Blue and White"></property>
+		<property name="championshipsWon" value="6"></property>
+		<property name="player" ref="playerId"></property>
+	</bean >
+	
+	<bean id="playerId" class="com.levent.setter.injection.model.Player">
+		<property name="name" value="Phil"></property>
+		<property name="surname" value="Foden"></property>
+		<property name="age" value="22"></property>
+	</bean>
+	
+</beans>
